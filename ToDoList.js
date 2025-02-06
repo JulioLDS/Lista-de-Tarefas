@@ -23,11 +23,11 @@ function mostrarTarefa() {
 
         novaLista = novaLista + ` 
             <li class="li-tarefa ${item.concluida && "done"}">
-                <img id="adicionar" src="img/lista-de-controle.png" 
+                <img id="adicionar" src="lista-de-controle.png" 
                 onclick="concluirTarefa(${posicao})"
                 alt="Adicionar">
                 <p>${item.tarefa}</p>
-                <img id="deletar" src="img/excluir.png" onclick="deletarTarefa(${posicao})" alt="Deletar">
+                <img id="deletar" src="excluir.png" onclick="deletarTarefa(${posicao})" alt="Deletar">
             </li>`
     })
 
