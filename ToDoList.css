@@ -1,0 +1,172 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+:root {
+    --cor1: #24a7a1;
+    --cor2: #562b35;
+    --cor3: #ff9810;
+    --cor4: #fd975c;
+    --cor5: #16cdc4;
+    --cor6: #1f132b;
+}
+
+svg{
+    position: absolute;
+    bottom: -250px;
+    width: 100%;
+    z-index: -1;
+}
+
+body {
+    background-color: var(--cor6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.ToDoList {
+    background-color: var(--cor1);
+    padding: 15px;
+    border-radius: 13px;
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    min-height: 80px;
+}
+
+h1 {
+    position: a;
+    left: 0;
+    font-size: 2rem;
+    background-color: var(--cor2);
+    padding: 15px;
+    border-radius: 13px;
+    font-weight: 900;
+    text-align: center;
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+}
+
+.ToDoList #digiteTarefa {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    outline: none;
+    width: 70%;
+    margin-block: 20px;
+    background-color: var(--cor3);
+    color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.ToDoList #digiteTarefa::placeholder {
+    color: rgba(0, 0, 0, 0.415);
+}
+
+
+
+.ToDoList .add {
+    position: relative;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: var(--cor5);
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--cor);
+    transition: all 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+.add:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.ToDoList ul{
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.ToDoList ul::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.ToDoList ul::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.ToDoList ul::-webkit-scrollbar-thumb {
+    background: var(--cor2); 
+    border-radius: 10px; 
+}
+
+.ToDoList ul::-webkit-scrollbar-thumb:hover {
+    background: var(--cor2); 
+}
+
+
+.ToDoList ul li {
+    font-family: poppins;
+    position: relative;
+    display: flex;
+    background-color: var(--cor4);
+    font-size: 0.9rem;
+    padding: 10px;
+    margin-block: 10px;
+    border-radius: 20px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+    height: 3vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+img {
+    width: 30px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 2;
+}
+
+
+
+#chapeu{
+    opacity: 1;
+    width: 300px;
+    position: relative;
+    top: 50px;
+    left: 180px;
+    transform: rotate(20deg);
+}
+
+.ToDoList ul li:hover {
+    transform: scale(1.03);
+}
+
+.ToDoList ul li:hover img {
+    opacity: 1;
+}
+
+.li-tarefa.done {
+    background-color: var(--cor5);
+    text-decoration: line-through;
+}
